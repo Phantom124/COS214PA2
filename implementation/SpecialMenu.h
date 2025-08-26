@@ -9,7 +9,7 @@ class SpecialMenu:public Menus
     void notifyObservers(string message);
     private:
 
-}
+};
 
 
 #endif //SPECIALMENU_H 
