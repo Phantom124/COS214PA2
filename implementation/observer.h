@@ -5,9 +5,11 @@
 using namespace std;
 class observer{
     public:
-    void update(string update);
+    virtual void update(string update)=0;
     observer();//for the operation() in the uml ?
+    // void setState(string state);
     private:
+        // string state;
 
 };
 
