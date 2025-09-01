@@ -8,7 +8,10 @@ class ToppingGroup : PizzaComponent {
     private:
         std::vector<PizzaComponent*> toppings;
     public:
+        ~ToppingGroup();
         void add(PizzaComponent* component);
+        virtual string getName();
+        virtual double getPrice();
 };
 
 #endif

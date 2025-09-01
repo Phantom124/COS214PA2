@@ -3,6 +3,11 @@
 
 #include "Topping.h"
 
+Topping::Topping(string name, double price){
+    this->name = name;
+    this->price = price;
+}
+
 string Topping::getName(){
     return this->name;
 }

@@ -5,6 +5,7 @@
 
 class Topping : public PizzaComponent {
     public:
+        Topping(string name, double price);
         virtual string getName();
         virtual double getPrice();
 };
