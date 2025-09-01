@@ -1,3 +1,6 @@
+#ifndef STUFFED_CRUST_CPP
+#define STUFFED_CRUST_CPP
+
 #include "StuffedCrust.h"
 
 StuffedCrust::StuffedCrust(double price, string name){
@@ -12,3 +15,5 @@ double StuffedCrust::getPrice(){
 string StuffedCrust::getName(){
     return this->name;
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef EXTRA_CHEESE_CPP
+#define EXTRA_CHEESE_CPP
+
 #include "ExtraCheese.h"
 
 ExtraCheese::ExtraCheese(double price, string name){
@@ -12,3 +15,5 @@ double ExtraCheese::getPrice(){
 string ExtraCheese::getName(){
     return this->name;
 }
+
+#endif
