@@ -1,8 +1,11 @@
 #ifndef MENUS_H
 #define MENUS_H
 
-#include "vector"
+#include <vector>
 #include "observer.h"
+#include "Pizza.h"
+#include <iostream>
+using namespace std;
 class Menus
 {
     private:
@@ -16,9 +19,9 @@ class Menus
         void addPizza(Pizza* pizza);
         void removeObserver(observer* observer);
         void removePizza(Pizza* pizza);
-        void notifyObservers(string message);
+        virtual void notifyObservers(string message)=0;
 };
 
 
 
-#endif//MENUS_H 
+#endif //MENUS_H 

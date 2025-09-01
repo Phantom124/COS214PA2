@@ -3,14 +3,15 @@
 
 #include "observer.h"
 #include "PizzaMenu.h"
+#include "SpecialMenu.h"
 class Customer:public observer
 {
     public:
-        Customer();
-        void update(string message);
+        Customer(string state);
+        void update(string message) override;
     private:
-        PizzaMenu* subject;
-        observer* observerState; 
+        string state;
+     
 };
 
 #endif //CUSTOMER_H 

@@ -2,12 +2,12 @@
 #define WEBSITE_H 
 
 #include "observer.h"
-class Website
+class Website:public observer
 {
     private:
-    
+        string  url ;
     public:
-        Website();
+        Website(string url);
         // ~Website();
         void update(string message);
 };

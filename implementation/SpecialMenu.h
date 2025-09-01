@@ -5,9 +5,7 @@
 class SpecialMenu:public Menus
 {
     public:
-    SpecialMenu();
     void notifyObservers(string message);
-    private:
 
 };
 
