@@ -7,8 +7,6 @@ class PizzaMenu:public Menus
     private:
         /* data */
     public:
-        PizzaMenu(/* args */);
-        ~PizzaMenu();
         void notifyObserver(string message);
 };
 
