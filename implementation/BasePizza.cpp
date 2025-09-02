@@ -2,10 +2,20 @@
 #define BASE_PIZZA_CPP
 
 #include "BasePizza.h"
+#include "PizzaDecorator.h"
 
 void BasePizza::addExtra(Pizza *decorator){
-    extra->addExtra(decorator);
+
+    // PizzaDecorator* dec = dynamic_cast<PizzaDecorator*>(decorator);
+    if (extra == nullptr){
+        extra = decorator;
+    } else {
+        extra->addExtra(decorator);
+    }
     this->price += decorator->getPrice();
+
+    cout << "Adding extra: " + decorator->getName() << endl;
+
 }
 
 BasePizza::BasePizza(PizzaComponent *toppings){
