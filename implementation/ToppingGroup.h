@@ -3,8 +3,9 @@
 
 #include <vector>
 #include "PizzaComponent.h"
+#include "Pizza.h"
 
-class ToppingGroup : Pizza {
+class ToppingGroup : public Pizza {
     private:
         std::vector<Pizza*> toppings;
     public:

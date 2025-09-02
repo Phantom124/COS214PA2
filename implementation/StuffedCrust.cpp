@@ -3,8 +3,8 @@
 
 #include "StuffedCrust.h"
 
-StuffedCrust::StuffedCrust(double price, string name){
-    this->price = price;
+StuffedCrust::StuffedCrust(string name){
+    this->price = 20;
     this->name = name;
 }
 

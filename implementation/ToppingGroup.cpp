@@ -31,7 +31,7 @@ string ToppingGroup::getName(){
     string output = this->name + " (";
 
     for (it = toppings.begin(); it != toppings.end(); ++it){
-        if (toppings.size() <= 2 || it == toppings.end() - 2) {
+        if (toppings.size() <= 2 || it == toppings.end() - 1) {
             output += (*it)->getName();
         } else {
             output += (*it)->getName() + ", ";    

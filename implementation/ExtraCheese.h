@@ -7,8 +7,9 @@
 using namespace std;
 
 class ExtraCheese : public PizzaDecorator {
+    
     public:
-        ExtraCheese(double price, string name);
+        ExtraCheese(string name);
         virtual double getPrice();
         virtual string getName();
 };

@@ -3,8 +3,8 @@
 
 #include "ExtraCheese.h"
 
-ExtraCheese::ExtraCheese(double price, string name){
-    this->price = price;
+ExtraCheese::ExtraCheese(string name){
+    this->price = 12;
     this->name = name;
 }
 

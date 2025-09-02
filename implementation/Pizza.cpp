@@ -6,7 +6,7 @@
 
 void Pizza::printPizza(){
 
-    cout << "Name: " << this->getName() << "\tPrice: " << this->getPrice() << endl;
+    cout << "Name: " << this->getName() << "\nPrice: " << this->getPrice() << endl;
     
 }
 

@@ -2,6 +2,8 @@
 #include "Topping.h"
 #include "StuffedCrust.h"
 #include "PizzaDecorator.h"
+#include "Pizza.h"
+#include "Pizza.cpp"
 #include <iostream>
 
 int main(){
@@ -18,14 +20,19 @@ int main(){
     Topping* mushrooms = new Topping("Mushrooms", 12);
     Topping* greenPeppers = new Topping("Green Peppers", 10);
     Topping* onions = new Topping("Onions", 8);
+    vegetarian->add(mushrooms);
+    vegetarian->add(greenPeppers);
+    vegetarian->add(onions);
 
     cout << vegetarian->getName() << endl;
     cout << vegetarian->getPrice() << endl;
 
+    vegetarian->printPizza();
+
     delete vegetarian;
     delete pepperoni;
 
-    
+
 
     return 0;
 }

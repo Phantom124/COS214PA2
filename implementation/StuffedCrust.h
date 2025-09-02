@@ -5,7 +5,7 @@
 
 class StuffedCrust : PizzaDecorator {
     public:
-        StuffedCrust(double price, string name);
+        StuffedCrust(string name);
         virtual double getPrice();
         virtual string getName();
 };
