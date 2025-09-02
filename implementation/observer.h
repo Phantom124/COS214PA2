@@ -6,7 +6,7 @@ using namespace std;
 class observer{
     public:
     virtual void update(string update)=0;
-    observer();//for the operation() in the uml ?
+    virtual ~observer()= default;
     // void setState(string state);
     private:
         // string state;

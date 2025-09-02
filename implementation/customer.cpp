@@ -1,5 +1,4 @@
-#ifndef CUSTOMER_CPP
-#define CUSTOMER_CPP
+
 
 #include "Customer.h"
 
@@ -8,8 +7,9 @@ Customer::Customer(string state):observer(){
 }
 void Customer::update(string message){
     // this->observerState.setState( message);
+    
     state = message;
+    cout<<"this is the updated message "<< state <<endl;
 
 }
 
-#endif

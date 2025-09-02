@@ -2,6 +2,10 @@
 #include "Topping.h"
 #include "StuffedCrust.h"
 #include "PizzaDecorator.h"
+#include "observer.h"
+#include "Customer.h"
+#include "Menus.h"
+#include "PizzaMenu.h"
 #include <iostream>
 
 int main(){
@@ -23,9 +27,20 @@ int main(){
     cout << vegetarian->getPrice() << endl;
 
     delete vegetarian;
+    delete mushrooms;
+    delete onions;
+    delete greenPeppers;
     delete pepperoni;
 
-    
+    observer* customer = new Customer("just arrived");
+    Menus* Pizza = new PizzaMenu()  ;
+    Pizza->addObserver(customer);
+    Pizza->notifyObservers("hi we are changing the menu take a look for yourself !!");
+    Pizza->removeObserver(customer);
+
+    delete Pizza;
+    delete customer;
+
 
     return 0;
 }

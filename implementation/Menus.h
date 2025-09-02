@@ -13,8 +13,8 @@ class Menus
         vector<Pizza*> pizzas;
     
     public:
-        Menus(/* args */);
-        ~Menus();
+        Menus() = default;
+        virtual ~Menus()= default;
         void addObserver(observer* observer);
         void addPizza(Pizza* pizza);
         void removeObserver(observer* observer);
