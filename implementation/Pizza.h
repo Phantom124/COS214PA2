@@ -16,9 +16,8 @@ class Pizza {
     protected:
         double price;
         string name;
-    private:
         discountStrategy* strategy;
-        
+
 };
 
 #endif
