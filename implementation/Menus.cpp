@@ -2,10 +2,6 @@
 #include <vector>
 using namespace std;
 
-Menus::Menus(){
-   //not sure about this line 
-}
-Menus::~Menus(){}
 
 void Menus::addObserver(observer* observer){
     observers.push_back(observer);

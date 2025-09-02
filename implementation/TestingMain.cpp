@@ -5,8 +5,14 @@
 #include "StuffedCrust.h"
 #include "ExtraCheese.h"
 #include "PizzaDecorator.h"
+
 #include "Pizza.h"
 #include "Pizza.cpp"
+
+#include "observer.h"
+#include "Customer.h"
+#include "Menus.h"
+#include "PizzaMenu.h"
 #include <iostream>
 
 void TestingCompositeAndDecoratorDesignPattern() {
@@ -107,12 +113,30 @@ int main(){
     // cout << vegetarian->getName() << endl;
     // cout << vegetarian->getPrice() << endl;
 
+
     // // vegetarian->printPizza();
 
     // BasePizza* pepperoniPizza = new BasePizza(pepperoni);
     // delete pepperoniPizza;
 
     TestingCompositeAndDecoratorDesignPattern();
+
+    delete vegetarian;
+    delete mushrooms;
+    delete onions;
+    delete greenPeppers;
+    delete pepperoni;
+
+    observer* customer = new Customer("just arrived");
+    Menus* Pizza = new PizzaMenu()  ;
+    Pizza->addObserver(customer);
+    Pizza->notifyObservers("hi we are changing the menu take a look for yourself !!");
+    Pizza->removeObserver(customer);
+
+    delete Pizza;
+    delete customer;
+
+
 
     return 0;
 }

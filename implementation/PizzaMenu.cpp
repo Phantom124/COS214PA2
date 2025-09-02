@@ -1,7 +1,8 @@
 #include "PizzaMenu.h"
 
-void PizzaMenu::notifyObserver(string message){
+void PizzaMenu::notifyObservers(string message){
      for (vector<observer*>::iterator it = observers.begin(); it != observers.end(); ++it) {
+        cout<<"notifying observer"<<endl;
         (*it)->update(message);
     }
 }

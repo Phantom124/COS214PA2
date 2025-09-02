@@ -2,12 +2,12 @@
 #define PIZZAMENU_H
 
 #include"Menus.h"
+#include "Pizza.h"
+#include "observer.h"
 class PizzaMenu:public Menus
 {
-    private:
-        /* data */
     public:
-        void notifyObserver(string message);
+        void  notifyObservers(string message) ;
 };
 
 
