@@ -5,17 +5,18 @@
 #include <iostream>
 using namespace std;
 
-void ToppingGroup::add(Pizza *component){
+void ToppingGroup::add(PizzaComponent *component){
     toppings.push_back(component);
 }
 
 ToppingGroup::ToppingGroup(string name){
     this->name = name;
+    this->price = 0;
 }
 
 ToppingGroup::~ToppingGroup()
 {
-    vector<Pizza*>::iterator it;
+    vector<PizzaComponent*>::iterator it;
 
     for (it = toppings.begin(); it != toppings.end(); ++it){
         if (*it != nullptr){
@@ -26,7 +27,7 @@ ToppingGroup::~ToppingGroup()
 }
 
 string ToppingGroup::getName(){
-    vector<Pizza*>::iterator it;
+    vector<PizzaComponent*>::iterator it;
 
     string output = this->name + " (";
 
@@ -45,10 +46,10 @@ string ToppingGroup::getName(){
 double ToppingGroup::getPrice(){
     double total = 0;
     
-    cout << this->name << "\t";
-    cout << this->toppings.size() << endl;
+    // cout << this->name << "\t";
+    // cout << this->toppings.size() << endl;
 
-    vector<Pizza*>::iterator it;
+    vector<PizzaComponent*>::iterator it;
 
     for (it = toppings.begin(); it != toppings.end(); ++it){
         total += (*it)->getPrice();

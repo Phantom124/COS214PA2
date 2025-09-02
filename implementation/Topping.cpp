@@ -3,7 +3,7 @@
 
 #include "Topping.h"
 
-Topping::Topping(string name, double price){
+Topping::Topping(string name, double price) {
     this->name = name;
     this->price = price;
 }

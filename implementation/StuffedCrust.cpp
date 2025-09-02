@@ -6,6 +6,7 @@
 StuffedCrust::StuffedCrust(string name){
     this->price = 20;
     this->name = name;
+    this->pizza = nullptr;
 }
 
 double StuffedCrust::getPrice(){

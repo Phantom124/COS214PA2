@@ -3,7 +3,7 @@
 
 #include "PizzaDecorator.h"
 
-class StuffedCrust : PizzaDecorator {
+class StuffedCrust : public PizzaDecorator {
     public:
         StuffedCrust(string name);
         virtual double getPrice();

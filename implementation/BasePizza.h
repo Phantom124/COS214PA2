@@ -2,13 +2,19 @@
 #define BASE_PIZZA
 
 #include "Pizza.h"
+#include "PizzaComponent.h"
 
 class BasePizza : public Pizza {
     private:
-        Pizza* Pizza;
+        PizzaComponent* toppings;
+        Pizza* extra;
     public:
-        virtual double getPrice() = 0;
-        virtual string getName() = 0;
+        void addExtra(Pizza* decorator);
+        BasePizza(PizzaComponent* toppings);
+        virtual double getPrice();
+        virtual string getName();
+        ~BasePizza();
+        // virtual void printPizza();
 };
 
 #endif

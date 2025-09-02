@@ -6,6 +6,7 @@
 ExtraCheese::ExtraCheese(string name){
     this->price = 12;
     this->name = name;
+    this->pizza = nullptr;
 }
 
 double ExtraCheese::getPrice(){

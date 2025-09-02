@@ -12,6 +12,7 @@ class ExtraCheese : public PizzaDecorator {
         ExtraCheese(string name);
         virtual double getPrice();
         virtual string getName();
+        // ~ExtraCheese();
 };
 
 #endif

@@ -7,6 +7,7 @@ using namespace std;
 
 class Pizza {
     public:
+        virtual void addExtra(Pizza* decorator) = 0;
         virtual double getPrice() = 0;
         virtual string getName() = 0;
         void printPizza();

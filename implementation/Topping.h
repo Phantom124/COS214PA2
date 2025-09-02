@@ -3,11 +3,13 @@
 
 #include "PizzaComponent.h"
 
-class Topping : public Pizza {
+class Topping : public PizzaComponent {
     public:
         Topping(string name, double price);
         virtual string getName();
         virtual double getPrice();
+        virtual ~Topping() = default;
+        void add(PizzaComponent* component){};
 };
 
 #endif
