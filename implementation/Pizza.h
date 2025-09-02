@@ -2,7 +2,7 @@
 #define PIZZA_H
 
 #include <string>
-
+#include "DiscountStrategy.h"
 using namespace std;
 
 class Pizza {
@@ -10,9 +10,14 @@ class Pizza {
         virtual double getPrice() = 0;
         virtual string getName() = 0;
         void printPizza();
+    //       Order(DiscountStrategy* strategy);
+    void setStrategy(discountStrategy* newStrategy);
     protected:
         double price;
         string name;
+    private:
+        discountStrategy* strategy;
+        
 };
 
 #endif

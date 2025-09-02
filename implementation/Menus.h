@@ -8,7 +8,7 @@
 using namespace std;
 class Menus
 {
-    private:
+    protected:
         vector<observer*>observers;
         vector<Pizza*> pizzas;
     
