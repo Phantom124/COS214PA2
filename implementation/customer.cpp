@@ -1,7 +1,7 @@
 #ifndef CUSTOMER_CPP
 #define CUSTOMER_CPP
 
-#include "Customer.h";
+#include "Customer.h"
 
 Customer::Customer(string state):observer(){
     this->state = state;

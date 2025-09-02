@@ -4,12 +4,13 @@
 #include <vector>
 #include "PizzaComponent.h"
 
-class ToppingGroup : PizzaComponent {
+class ToppingGroup : Pizza {
     private:
-        std::vector<PizzaComponent*> toppings;
+        std::vector<Pizza*> toppings;
     public:
+        ToppingGroup(string name);
         ~ToppingGroup();
-        void add(PizzaComponent* component);
+        void add(Pizza* component);
         virtual string getName();
         virtual double getPrice();
 };

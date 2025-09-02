@@ -3,7 +3,7 @@
 
 #include "PizzaComponent.h"
 
-class Topping : public PizzaComponent {
+class Topping : public Pizza {
     public:
         Topping(string name, double price);
         virtual string getName();

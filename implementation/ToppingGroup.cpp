@@ -2,14 +2,20 @@
 #define TOPPING_GROUP_CPP
 
 #include "ToppingGroup.h"
+#include <iostream>
 using namespace std;
 
-void ToppingGroup::add(PizzaComponent *component){
+void ToppingGroup::add(Pizza *component){
     toppings.push_back(component);
 }
 
-ToppingGroup::~ToppingGroup(){
-    vector<PizzaComponent*>::iterator it;
+ToppingGroup::ToppingGroup(string name){
+    this->name = name;
+}
+
+ToppingGroup::~ToppingGroup()
+{
+    vector<Pizza*>::iterator it;
 
     for (it = toppings.begin(); it != toppings.end(); ++it){
         if (*it != nullptr){
@@ -20,12 +26,16 @@ ToppingGroup::~ToppingGroup(){
 }
 
 string ToppingGroup::getName(){
-    vector<PizzaComponent*>::iterator it;
+    vector<Pizza*>::iterator it;
 
     string output = this->name + " (";
 
     for (it = toppings.begin(); it != toppings.end(); ++it){
-        output += (*it)->getName() + ", ";
+        if (toppings.size() <= 2 || it == toppings.end() - 2) {
+            output += (*it)->getName();
+        } else {
+            output += (*it)->getName() + ", ";    
+        }
     }
 
     output += ")";
@@ -35,7 +45,10 @@ string ToppingGroup::getName(){
 double ToppingGroup::getPrice(){
     double total = 0;
     
-    vector<PizzaComponent*>::iterator it;
+    cout << this->name << "\t";
+    cout << this->toppings.size() << endl;
+
+    vector<Pizza*>::iterator it;
 
     for (it = toppings.begin(); it != toppings.end(); ++it){
         total += (*it)->getPrice();
