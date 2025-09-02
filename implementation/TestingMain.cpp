@@ -121,11 +121,11 @@ int main(){
 
     TestingCompositeAndDecoratorDesignPattern();
 
-    delete vegetarian;
-    delete mushrooms;
-    delete onions;
-    delete greenPeppers;
-    delete pepperoni;
+    // delete vegetarian;
+    // delete mushrooms;
+    // delete onions;
+    // delete greenPeppers;
+    // delete pepperoni;
 
     observer* customer = new Customer("just arrived");
     Menus* Pizza = new PizzaMenu()  ;
